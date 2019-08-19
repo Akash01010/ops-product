@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sapient.ops.dao.CustomerDAO;
-import com.sapient.ops.entity.CustomerEntity;
 import com.sapient.ops.exception.CustomerException;
 import com.sapient.ops.model.Customer;
+import com.sapient.ops.model.CustomerEntity;
 import com.sapient.ops.utility.AppConfig;
 
 @Service

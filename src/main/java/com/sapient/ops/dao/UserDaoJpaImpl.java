@@ -13,7 +13,7 @@ import javax.persistence.TypedQuery;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
-import com.sapient.ops.entity.User;
+import com.sapient.ops.model.User;
 
 @Repository
 public class UserDaoJpaImpl implements UserDAO{

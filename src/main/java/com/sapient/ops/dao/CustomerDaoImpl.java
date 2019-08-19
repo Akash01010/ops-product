@@ -10,7 +10,7 @@ import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Repository;
 
-import com.sapient.ops.entity.CustomerEntity;
+import com.sapient.ops.model.CustomerEntity;
 import com.sapient.ops.utility.AppConfig;
 
 @Repository

@@ -14,19 +14,19 @@ public class ProductTest {
 	@Before
 	public void setup() throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		product = new Product(new Integer(1),"Shoes","Addidas shoes having size 10", sdf.parse("10/10/1996"),6599.00);
+		product = new Product(1L,"Shoes","Addidas shoes having size 10", sdf.parse("10/10/1996"),6599.00);
 
 	}
 	@Test
 	public void testGetProduct_id() {
-		assertEquals(new Integer(1), product.getProduct_id());
+		assertEquals(new Long(1), product.getProduct_id());
 	}
 
 	@Test
 	public void testSetProduct_id() {
-		product.setProduct_id(2);
-		assertEquals(new Integer(2),product.getProduct_id());
-		product.setProduct_id(1);
+		product.setProduct_id(2L);
+		assertEquals(new Long(2),product.getProduct_id());
+		product.setProduct_id(1L);
 	}
 
 	@Test

@@ -30,8 +30,8 @@ public class ProductServiceTests {
 	@Before
 	public void setup() throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		product = new Product(new Integer(1),"Shoes","Addidas shoes having size 10", sdf.parse("10/10/1996"),6599.00);
-		updatedProduct = new Product(new Integer(1),"Shoes","Addidas shoes having size 11", sdf.parse("10/10/1996"),6499.00);
+		product = new Product(1L,"Shoes","Addidas shoes having size 10", sdf.parse("10/10/1996"),6599.00);
+		updatedProduct = new Product(1L,"Shoes","Addidas shoes having size 11", sdf.parse("10/10/1996"),6499.00);
 	}
 	
 	@Test
@@ -61,14 +61,14 @@ public class ProductServiceTests {
 	public void testUpdateProduct() {
 		Mockito.doReturn(product).when(productRepository).findById(Integer.toUnsignedLong(new Integer(1)));
 		Mockito.when(productRepository.save(product)).thenReturn(product);
-		assertEquals(updatedProduct, productService.updateProduct(new Integer(1), updatedProduct));
+		assertEquals(updatedProduct, productService.updateProduct(1L, updatedProduct));
 		
 	}
 	
 	@Test
 	public void testDeleteProduct() {
 		Mockito.doReturn(product).when(productRepository).findById(Integer.toUnsignedLong(new Integer(1)));
-		assertEquals(ResponseEntity.ok(),productService.deleteProduct(1));
+		assertEquals(ResponseEntity.ok(),productService.deleteProduct(1L));
 	}
 	
 }

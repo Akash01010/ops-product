@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sapient.ops.dao.ProductRepository;
 import com.sapient.ops.exception.ResourceNotFoundException;
+import com.sapient.ops.model.Customer;
 import com.sapient.ops.model.Product;
 
 @Service
@@ -27,8 +28,8 @@ public class ProductService implements IProductService{
 	}
 
 	@Override
-	public Product updateProduct(Integer product_id, Product productDetails) {
-		Product product = productRepository.findById(Integer.toUnsignedLong(product_id)).orElseThrow( () -> new ResourceNotFoundException("Product","id",product_id));
+	public Product updateProduct(Long product_id, Product productDetails) {
+		Product product = productRepository.findById(product_id).orElseThrow( () -> new ResourceNotFoundException("Product","id",product_id));
 		product.setProduct_name(productDetails.getProduct_name());
 		product.setDescription(productDetails.getDescription());
 		product.setManufacture_date(productDetails.getManufacture_date());
@@ -38,10 +39,15 @@ public class ProductService implements IProductService{
 	}
 
 	@Override
-	public ResponseEntity<?> deleteProduct(Integer product_id) {
-		Product product = productRepository.findById(Integer.toUnsignedLong(product_id)).orElseThrow( () -> new ResourceNotFoundException("Product","id",product_id));
+	public ResponseEntity<?> deleteProduct(Long product_id) {
+		Product product = productRepository.findById(product_id).orElseThrow( () -> new ResourceNotFoundException("Product","id",product_id));
 		productRepository.delete(product);
 		return ResponseEntity.ok().build();
+	}
+
+	@Override
+	public Product getProductById(Long id) {
+		return productRepository.findById(id).get();
 	}
 
 }

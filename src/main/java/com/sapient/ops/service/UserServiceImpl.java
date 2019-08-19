@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.sapient.ops.dao.UserDAO;
 import com.sapient.ops.dao.UserDaoJpaImpl;
-import com.sapient.ops.entity.User;
 import com.sapient.ops.exception.UserException;
+import com.sapient.ops.model.User;
 
 @Service
 @Transactional

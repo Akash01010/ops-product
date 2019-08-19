@@ -11,7 +11,7 @@
 
  <h2 align="center"><font color="blue">Hi! ${sessionScope.validUser.userName}, Welcome To Order Processing System</font></h2><br>
  <div class="bg-img" class="container">	 
-	<form action="http://localhost:9090/ops-product/modulec" >
+	<form action="http://localhost:9090/modulec" >
 		<div align="center">
 		  <input type="submit" name="ops" value="product" class="fancy" ><br>
 		  <input type="submit" name="ops" value="order" class="fancy"><br>

@@ -37,13 +37,13 @@ public class ProductRESTController {
 
 	@PutMapping("/product/{id}")
 	public Product updateProduct(@PathVariable(value = "id") Long productId, @Valid @RequestBody Product productDetails) { 
-		return productService.updateProduct(productId.intValue(), productDetails); 
+		return productService.updateProduct(productId, productDetails); 
 	} 
 
 	// Delete a Note 
 	@DeleteMapping("/product/{id}") 
 	public ResponseEntity<?> deleteProduct(@PathVariable(value = "id") Long productId) { 
-		return productService.deleteProduct(productId.intValue()); 
+		return productService.deleteProduct(productId); 
 	}
 
 }

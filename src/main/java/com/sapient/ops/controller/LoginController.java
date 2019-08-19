@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.sapient.ops.entity.User;
+import com.sapient.ops.model.User;
 import com.sapient.ops.service.UserService;
 
 @Controller
@@ -75,7 +75,6 @@ public class LoginController {
 			model.addAttribute("message","Already Logged out..");
 			return "login";
 		}
-		
 	}
 	
 }

@@ -12,32 +12,30 @@
 <body>	
 	
 				<div class="container">
-				  	<h2>Customer Details</h2>
+				  	<h2>Product Details</h2>
 				  
 				  <table class="table">
 					    <thead>
 						      <tr>
-						        <th>Customer ID</th>
-						        <th>Customer Name</th>
-						        <th>Birthdate</th>
-						        <th>Mobile</th>
-						         <th>Address</th>
-						        <th>Email</th>
+						        <th>Product ID</th>
+						        <th>Product Name</th>
+						        <th>Description</th>
+						        <th>Manufacturing Date</th>
+						        <th>Buying Price</th>
 						        <th>Edit</th>
 						        <th>Delete</th>
 						      </tr>
 					    </thead>
 					    <tbody>
-					    	<c:forEach var="c" items="${customerList}">
+					    	<c:forEach var="c" items="${productList}">
 						      <tr class="success">
-						        <td>${c.customerId}</td>				        
-						        <td>${c.customerName}</td>
-						        <td>${c.birthdate}</td>
-						        <td>${c.mobile}</td>
-						        <td>${c.address}</td>
-						        <td>${c.email}</td>						        
-						        <td><a href="http://localhost:9090/custc/preeditc?customerid=${c.customerId}">edit</a></td>
-						        <td><a href="http://localhost:9090/custc/deletec?customerid=${c.customerId}">delete</a></td>
+						        <td>${c.product_id}</td>				        
+						        <td>${c.product_name}</td>
+						        <td>${c.description}</td>
+						        <td>${c.manufacture_date}</td>
+						        <td>${c.buying_price}</td>					        
+						        <td><a href="http://localhost:9090/prodc/preeditp?productid=${c.product_id}">edit</a></td>
+						        <td><a href="http://localhost:9090/prodc/deletep?productid=${c.product_id}">delete</a></td>
 						      </tr>      
 						    </c:forEach>
 					    </tbody>

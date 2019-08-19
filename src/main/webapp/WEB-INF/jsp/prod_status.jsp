@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Customer Status</title>
+<title>Product Status</title>
 </head>
 <body>
 	<h1><font color="orange">${message}</font></h1>
-	<a href="http://localhost:9090/custc/cmenu">Customer Menu</a>
+	<a href="http://localhost:9090/prodc/pmenu">Product Menu</a>
 </body>
 </html>

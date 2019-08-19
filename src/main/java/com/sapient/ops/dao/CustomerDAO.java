@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.persistence.PersistenceException;
 
-import com.sapient.ops.entity.CustomerEntity;
+import com.sapient.ops.model.CustomerEntity;
 
 
 

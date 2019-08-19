@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -18,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Integer product_id;
+	private Long product_id;
 	@NotBlank
 	private String product_name;
 	private String description;
@@ -26,12 +27,12 @@ public class Product {
 			pattern = "dd/MM/yyyy")
 	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date manufacture_date;
-	@NotBlank
+	@NotNull
 	private Double buying_price;
 	
 	public Product() {
 	}
-	public Product(Integer product_id, @NotBlank String product_name, String description, Date manufacture_date,
+	public Product(Long product_id, @NotBlank String product_name, String description, Date manufacture_date,
 			@NotBlank Double buying_price) {
 		super();
 		this.product_id = product_id;
@@ -40,10 +41,10 @@ public class Product {
 		this.manufacture_date = manufacture_date;
 		this.buying_price = buying_price;
 	}
-	public Integer getProduct_id() {
+	public Long getProduct_id() {
 		return product_id;
 	}
-	public void setProduct_id(Integer product_id) {
+	public void setProduct_id(Long product_id) {
 		this.product_id = product_id;
 	}
 	public String getProduct_name() {

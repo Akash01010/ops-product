@@ -4,7 +4,7 @@ package com.sapient.ops.dao;
 
 import java.util.List;
 
-import com.sapient.ops.entity.User;
+import com.sapient.ops.model.User;
 
 public interface UserDAO {
 	public abstract Integer addNewUser(User user) throws Exception;

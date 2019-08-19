@@ -17,9 +17,9 @@
             <%-- <img id="profile-img" class="profile-img-card" src="<c:url value="/images/bear.jpg" />" /> --%>
             <p id="profile-name" class="profile-name-card"></p>
             <div align="center" class="container1">
-	            <form:form class="form-signin" modelAttribute="user" action="http://localhost:8080/ops-spring-jpa-web-app/logc/verify"  method="post">
+	            <form:form class="form-signin" modelAttribute="user" action="http://localhost:9090/logc/verify"  method="post">
 	                <span id="reauth-email" class="reauth-email"></span>
-	                <form:input path="userName" id="inputEmail" class="form-control" placeholder="Enter Username"/><form:errors path="userName" cssClass="error"/><br>
+	                <form:input path="userName" id="inputUsername" class="form-control" placeholder="Enter Username"/><form:errors path="userName" cssClass="error"/><br>
 	                <form:password path="password" id="inputPassword" class="form-control" placeholder="Enter Password"/><form:errors path="userName"/><form:errors path="password" cssClass="error"/><br>
 	                <input type="submit" class="btn" value="                  Login                               " />
 	            </form:form>

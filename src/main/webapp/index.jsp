@@ -3,11 +3,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1><font color="green">${message}</font></h1>
-	<a href="http://localhost:9090/logc/">Login</a>
+<h1>This is first file you're gonna hit.</h1>
 </body>
 </html>

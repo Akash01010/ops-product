@@ -18,6 +18,9 @@ public class ModuleController {
 		}else if(ops.equals("product")) {
 			return "product_menu";
 		}
+//		else if(ops.equals("order")) {
+//			return "order_menu";
+//		}
 		else {
 			model.addAttribute("message","PAGE_UNDER_CONSTRUCTION");
 			return "status";

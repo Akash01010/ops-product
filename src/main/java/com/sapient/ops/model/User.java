@@ -1,4 +1,4 @@
-package com.sapient.ops.entity;
+package com.sapient.ops.model;
 
 import java.util.Date;
 
